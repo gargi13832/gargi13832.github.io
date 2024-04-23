@@ -5,52 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website Title</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Link to Font Awesome for icons -->
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo"><a href="#home">Your Logo</a></h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
     </nav>
 
     <!-- Header Section -->
-    <header id="home">
-        <h1>Your Name</h1>
-        <p>Welcome to your website!</p>
+    <header id="home" class="hero">
+        <div class="container">
+            <h1>Welcome to Your Website</h1>
+            <p>Let's create something amazing together.</p>
+            <a href="#contact" class="btn">Get in Touch</a>
+        </div>
     </header>
 
     <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>This is where you can introduce yourself.</p>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>This is where you can introduce yourself. Tell visitors who you are, what you do, and why they should choose you.</p>
+        </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services">
-        <h2>Services</h2>
-        <p>Describe the services you offer.</p>
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Services</h2>
+            <div class="service">
+                <i class="fas fa-code"></i>
+                <h3>Web Development</h3>
+                <p>We design and develop responsive websites using the latest technologies.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-paint-brush"></i>
+                <h3>Graphic Design</h3>
+                <p>We create eye-catching designs for your brand identity, marketing materials, and more.</p>
+            </div>
+            <!-- Add more services as needed -->
+        </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <p>Showcase your projects or work samples.</p>
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <!-- Add your portfolio items here -->
+        </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Provide contact information or a contact form.</p>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Get in touch with us to discuss your project or ask any questions.</p>
+            <form action="#" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <!-- Add more social icons as needed -->
+            </div>
+        </div>
     </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        const menuBtn = document.querySelector('.hamburger-menu');
+        const navbar = document.querySelector('.nav-links');
+
+        menuBtn.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
